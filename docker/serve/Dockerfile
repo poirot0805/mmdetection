@@ -14,7 +14,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
     ca-certificates \
     g++ \
     openjdk-11-jre-headless \
