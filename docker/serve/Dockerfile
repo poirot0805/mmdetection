@@ -10,8 +10,8 @@ ENV PYTHONUNBUFFERED TRUE
 
 RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list
 RUN apt-get clean
-RUN apt-get-update
-RUN apt-get-upgrade
+RUN apt-get update
+RUN apt-get upgrade
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
