@@ -26,13 +26,13 @@ ENV PATH="/opt/conda/bin:$PATH"
 RUN export FORCE_CUDA=1
 
 # TORCHSEVER
-RUN pip install torchserve torch-model-archiver
+RUN pip install torchserve torch-model-archiver -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 # MMLAB
 ARG PYTORCH
 ARG CUDA
 RUN ["/bin/bash", "-c", "pip install mmcv-full==${MMCV} -f https://download.openmmlab.com/mmcv/dist/cu${CUDA//./}/torch${PYTORCH}/index.html"]
-RUN pip install mmdet==${MMDET}
+RUN pip install mmdet==${MMDET} -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 RUN useradd -m model-server \
     && mkdir -p /home/model-server/tmp
