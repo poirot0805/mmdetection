@@ -21,21 +21,23 @@ from .custom import CustomDataset
 
 @DATASETS.register_module()
 class CocoDataset(CustomDataset):
-
-    CLASSES = ('person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
-               'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
-               'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog',
-               'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe',
-               'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee',
-               'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat',
-               'baseball glove', 'skateboard', 'surfboard', 'tennis racket',
-               'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl',
-               'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot',
-               'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch',
-               'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop',
-               'mouse', 'remote', 'keyboard', 'cell phone', 'microwave',
-               'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock',
-               'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush')
+    CLASSES = ('坐便器','小便器','蹲便器','台式洗脸盆','台式洗脸盆-双盆','台式洗脸盆-单盆',
+               '长条台式洗脸盆','立式洗脸盆','洗脸盆','洗涤槽','洗涤槽-双槽','拖把池',
+               '水龙头','洗衣机', '淋浴房', '淋浴房-转角型', '浴缸','淋浴器')
+    # CLASSES = ('person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
+    #            'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
+    #            'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog',
+    #            'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe',
+    #            'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee',
+    #            'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat',
+    #            'baseball glove', 'skateboard', 'surfboard', 'tennis racket',
+    #            'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl',
+    #            'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot',
+    #            'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch',
+    #            'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop',
+    #            'mouse', 'remote', 'keyboard', 'cell phone', 'microwave',
+    #            'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock',
+    #            'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush')
 
     def load_annotations(self, ann_file):
         """Load annotation from COCO style annotation file.

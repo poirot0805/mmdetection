@@ -167,6 +167,9 @@ def imshow_det_bboxes(img,
         polygons, facecolor='none', edgecolors=color, linewidths=thickness)
     ax.add_collection(p)
 
+    plt.rcParams['font.sans-serif']=['SimHei'] #显示中文标签
+    plt.rcParams['axes.unicode_minus']=False
+
     stream, _ = canvas.print_to_buffer()
     buffer = np.frombuffer(stream, dtype='uint8')
     img_rgba = buffer.reshape(height, width, 4)

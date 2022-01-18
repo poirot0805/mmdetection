@@ -104,8 +104,8 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-data/
-data
+# data/
+# data
 .vscode
 .idea
 .DS_Store
@@ -116,9 +116,9 @@ data
 *.log.json
 docs/modelzoo_statistics.md
 mmdet/.mim
-work_dirs/
+# work_dirs/
 
 # Pytorch
-*.pth
+# *.pth
 *.py~
 *.sh~

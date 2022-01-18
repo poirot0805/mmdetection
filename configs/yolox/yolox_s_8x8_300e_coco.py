@@ -15,7 +15,7 @@ model = dict(
         out_channels=128,
         num_csp_blocks=1),
     bbox_head=dict(
-        type='YOLOXHead', num_classes=80, in_channels=128, feat_channels=128),
+        type='YOLOXHead', num_classes=18, in_channels=128, feat_channels=128),
     train_cfg=dict(assigner=dict(type='SimOTAAssigner', center_radius=2.5)),
     # In order to align the source code, the threshold of the val phase is
     # 0.01, and the threshold of the test phase is 0.001.
@@ -57,8 +57,8 @@ train_dataset = dict(
     type='MultiImageMixDataset',
     dataset=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_train2017.json',
-        img_prefix=data_root + 'train2017/',
+        ann_file=data_root + 'annotations/anno_train.json',
+        img_prefix=data_root + 'train2017/image/',
         pipeline=[
             dict(type='LoadImageFromFile'),
             dict(type='LoadAnnotations', with_bbox=True)
@@ -92,20 +92,20 @@ data = dict(
     train=train_dataset,
     val=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_val2017.json',
-        img_prefix=data_root + 'val2017/',
+        ann_file=data_root + 'annotations/anno_val.json',
+        img_prefix=data_root + 'val2017/image/',
         pipeline=test_pipeline),
     test=dict(
         type=dataset_type,
-        ann_file=data_root + 'annotations/instances_val2017.json',
-        img_prefix=data_root + 'val2017/',
+        ann_file=data_root + 'annotations/anno_val.json',
+        img_prefix=data_root + 'val2017/image/',
         pipeline=test_pipeline))
 
 # optimizer
 # default 8 gpu
 optimizer = dict(
     type='SGD',
-    lr=0.01,
+    lr=0.0025,
     momentum=0.9,
     weight_decay=5e-4,
     nesterov=True,

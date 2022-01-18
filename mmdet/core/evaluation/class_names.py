@@ -66,21 +66,24 @@ def imagenet_vid_classes():
 
 
 def coco_classes():
-    return [
-        'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train',
-        'truck', 'boat', 'traffic_light', 'fire_hydrant', 'stop_sign',
-        'parking_meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep',
-        'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella',
-        'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard',
-        'sports_ball', 'kite', 'baseball_bat', 'baseball_glove', 'skateboard',
-        'surfboard', 'tennis_racket', 'bottle', 'wine_glass', 'cup', 'fork',
-        'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange',
-        'broccoli', 'carrot', 'hot_dog', 'pizza', 'donut', 'cake', 'chair',
-        'couch', 'potted_plant', 'bed', 'dining_table', 'toilet', 'tv',
-        'laptop', 'mouse', 'remote', 'keyboard', 'cell_phone', 'microwave',
-        'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase',
-        'scissors', 'teddy_bear', 'hair_drier', 'toothbrush'
-    ]
+    # return [
+    #     'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train',
+    #     'truck', 'boat', 'traffic_light', 'fire_hydrant', 'stop_sign',
+    #     'parking_meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep',
+    #     'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella',
+    #     'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard',
+    #     'sports_ball', 'kite', 'baseball_bat', 'baseball_glove', 'skateboard',
+    #     'surfboard', 'tennis_racket', 'bottle', 'wine_glass', 'cup', 'fork',
+    #     'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange',
+    #     'broccoli', 'carrot', 'hot_dog', 'pizza', 'donut', 'cake', 'chair',
+    #     'couch', 'potted_plant', 'bed', 'dining_table', 'toilet', 'tv',
+    #     'laptop', 'mouse', 'remote', 'keyboard', 'cell_phone', 'microwave',
+    #     'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase',
+    #     'scissors', 'teddy_bear', 'hair_drier', 'toothbrush'
+    # ]
+    return ['坐便器','小便器','蹲便器','台式洗脸盆','台式洗脸盆-双盆','台式洗脸盆-单盆',
+        '长条台式洗脸盆','立式洗脸盆','洗脸盆','洗涤槽','洗涤槽-双槽','拖把池',
+        '水龙头','洗衣机', '淋浴房', '淋浴房-转角型', '浴缸','淋浴器']
 
 
 def cityscapes_classes():
